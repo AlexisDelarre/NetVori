@@ -1,0 +1,62 @@
+﻿<Page
+    x:Class="NetVori.BattleScreen"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NetVori"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="980" Width="1920">
+
+    <Grid Margin="0,-42,0,-36">
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/BattleScreen.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Border Height="254" Margin="-15,808,-15,-4" BorderThickness="5,5,5,5">
+            <Border.Background>
+                <SolidColorBrush Color="#FF767676" Opacity="0.5"/>
+            </Border.Background>
+        </Border>
+        <Image Height="219" Margin="94,512,1486,249" Width="340"/>
+        <Image Height="209" Margin="1416,79,160,692" Width="344"/>
+        <Button Name="btnAttaqueC" Background="White" Content="Attaque C" HorizontalAlignment="Stretch" Margin="1148,844,160,158" VerticalAlignment="Stretch" FontSize="24" FontWeight="Bold" Click="btnAttaqueC_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <Border CornerRadius="95" Background="White">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Name="btnAttaqueD" Background="White" Content="Attaque D" HorizontalAlignment="Stretch" Margin="1148,963,160,42" VerticalAlignment="Stretch" FontSize="24" FontWeight="Bold" Click="Button_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <Border CornerRadius="95" Background="White">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Name="btnAttaqueB" Background="White" Content="Attaque B" HorizontalAlignment="Stretch" Margin="128,963,1180,42" VerticalAlignment="Stretch" FontSize="24" FontWeight="Bold" Click="btnAttaqueB_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <Border CornerRadius="95" Background="White">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <Button Name="btnAttaqueA" Content="Attaque A" HorizontalAlignment="Stretch" Margin="128,844,1180,161" VerticalAlignment="Stretch" FontSize="24" FontWeight="Bold" Click="btnAttaqueA_Click">
+            <Button.Template>
+                <ControlTemplate>
+                    <Border CornerRadius="95" Background="White">
+                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+        <ProgressBar Name="BarreDeVieJoueur" Height="56" Margin="1324,620,68,304" VerticalAlignment="Stretch" Width="528"/>
+        <ProgressBar Name="BarreDeVieEnemis" Height="56" Margin="46,10,1346,914" VerticalAlignment="Stretch" Width="528"/>
+
+    </Grid>
+</Page>

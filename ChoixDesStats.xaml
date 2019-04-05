@@ -1,0 +1,26 @@
+﻿<Page
+    x:Class="NetVori.ChoixDesStats"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:NetVori"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
+        <TextBlock x:Name="txtHP" HorizontalAlignment="Left" Margin="1050,428,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="110"/>
+        <TextBlock x:Name="txtForce" HorizontalAlignment="Left" Margin="1050,540,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="110"/>
+        <TextBlock x:Name="txtBouclier" HorizontalAlignment="Left" Margin="1050,638,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="110"/>
+        <Button x:Name="basHP" Content="bas" HorizontalAlignment="Left" Margin="1206,422,0,0" VerticalAlignment="Top" Click="basHP_Click"/>
+        <Button x:Name="hautHP" Content="haut" HorizontalAlignment="Left" Margin="1346,424,0,0" VerticalAlignment="Top" Click="hautHP_Click"/>
+        <Button x:Name="basForce" Content="bas" HorizontalAlignment="Left" Margin="1206,534,0,0" VerticalAlignment="Top" Click="basForce_Click"/>
+        <Button x:Name="hautForce" Content="haut" HorizontalAlignment="Left" Margin="1348,538,0,0" VerticalAlignment="Top" Click="hautForce_Click"/>
+        <Button x:Name="basBouclier" Content="bas" HorizontalAlignment="Left" Margin="1206,636,0,0" VerticalAlignment="Top" Click="basBouclier_Click"/>
+        <Button x:Name="hautBouclier" Content="haut" HorizontalAlignment="Left" Margin="1348,638,0,0" VerticalAlignment="Top" Click="hautBouclier_Click"/>
+        <TextBlock x:Name="txtNbrPoint" HorizontalAlignment="Left" Margin="1239,52,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="78" Width="190" FontSize="36"/>
+        <TextBox x:Name="txtNom" HorizontalAlignment="Center" Margin="0,48,0,0" Text="Nom de votre vaisseau" VerticalAlignment="Top" Height="72" Width="386" FontSize="36" TextChanged="txtNom_TextChanged"/>
+        <Button Content="Let's Go !" HorizontalAlignment="Left" Margin="663,866,0,0" VerticalAlignment="Top" Height="102" Width="339" Click="Button_Click"/>
+
+    </Grid>
+</Page>
