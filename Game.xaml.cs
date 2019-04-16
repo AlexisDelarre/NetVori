@@ -14,6 +14,8 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 using System.Windows.Input;
+using Windows.UI;
+using NetVori.Entite;
 // Pour plus d'informations sur le modèle d'élément Page vierge, consultez la page https://go.microsoft.com/fwlink/?LinkId=234238
 
 namespace NetVori
@@ -30,10 +32,20 @@ namespace NetVori
         {
             this.InitializeComponent();
             GridConteneur.Visibility = Visibility.Collapsed;
-            BtnQuitter.Visibility = Visibility.Collapsed;
+           
             btnVaisseau.Margin = new Thickness(App.coordX, App.coordY, App.coordW, App.coordZ);
             if (App.AfterEvent)
                 ApresEvent(0, false);
+            txtComp1.Text = App.inventaire.Inventary[0].Nom;
+            txtComp2.Text = App.inventaire.Inventary[1].Nom;
+            txtComp3.Text = App.inventaire.Inventary[2].Nom;
+            txtComp4.Text = App.inventaire.Inventary[3].Nom;
+            if(App.inventaire.Inventary.Count > 4) 
+                txtComp5.Text = App.inventaire.Inventary[4].Nom;
+            if (App.inventaire.Inventary.Count > 5)
+                txtComp6.Text = App.inventaire.Inventary[5].Nom;
+
+
 
         }
 
@@ -62,13 +74,155 @@ namespace NetVori
         private void btnConteneur_Click(object sender, RoutedEventArgs e)
         {
             GridConteneur.Visibility = Visibility.Visible;
-            BtnQuitter.Visibility = Visibility.Visible;
+            
+        }
+        private void Valide1_Click(object sender, RoutedEventArgs e)
+        {
+            if(Valide1.Content.ToString() == "✔")
+            {
+                App.vaisseau.ListTechnique.Remove(RechercheTech(txtComp1.Text));
+                Valide1.Content = "✘";
+                Valide1.Foreground = new SolidColorBrush(Colors.Red);
+            }
+            else
+            {
+                if(App.vaisseau.ListTechnique.Count < 4)
+                {
+                    App.vaisseau.ListTechnique.Add(RechercheTech(txtComp1.Text));
+                    Valide1.Content = "✔";
+                    Valide1.Foreground = new SolidColorBrush(Colors.Green);
+                }
+            }
         }
 
-        private void BtnQuitter_Click(object sender, RoutedEventArgs e)
+        public Technique RechercheTech(string nom)
         {
-            GridConteneur.Visibility = Visibility.Collapsed;
-            BtnQuitter.Visibility = Visibility.Collapsed;
+            Technique tec = new Technique("NULL",0);
+            foreach (Technique t in App.ListeDeCompetenceBase)
+            {
+                if (t.Nom == nom)
+                    return t;
+            }
+            return tec;
+        }
+
+        private void Valide2_Click(object sender, RoutedEventArgs e)
+        {
+            if (txtComp6.Text != string.Empty)
+            {
+                if (Valide2.Content.ToString() == "✔")
+                {
+                    App.vaisseau.ListTechnique.Remove(RechercheTech(txtComp2.Text));
+                    Valide2.Content = "✘";
+                    Valide2.Foreground = new SolidColorBrush(Colors.Red);
+                }
+                else
+                {
+                    if (App.vaisseau.ListTechnique.Count < 4)
+                    {
+                        App.vaisseau.ListTechnique.Add(RechercheTech(txtComp2.Text));
+                        Valide2.Content = "✔";
+                        Valide2.Foreground = new SolidColorBrush(Colors.Green);
+                    }
+                }
+            }
+        }
+
+        private void Valide3_Click(object sender, RoutedEventArgs e)
+        {
+            if (txtComp6.Text != string.Empty)
+            {
+                if (Valide3.Content.ToString() == "✔")
+                {
+                    App.vaisseau.ListTechnique.Remove(RechercheTech(txtComp3.Text));
+                    Valide3.Content = "✘";
+                    Valide3.Foreground = new SolidColorBrush(Colors.Red);
+                }
+                else
+                {
+                    if (App.vaisseau.ListTechnique.Count < 4)
+                    {
+                        App.vaisseau.ListTechnique.Add(RechercheTech(txtComp3.Text));
+                        Valide3.Content = "✔";
+                        Valide3.Foreground = new SolidColorBrush(Colors.Green);
+                    }
+                }
+            }
+        }
+
+        private void Valide4_Click(object sender, RoutedEventArgs e)
+        {
+            if (txtComp6.Text != string.Empty)
+            {
+                if (Valide4.Content.ToString() == "✔")
+                {
+                    App.vaisseau.ListTechnique.Remove(RechercheTech(txtComp4.Text));
+                    Valide4.Content = "✘";
+                    Valide4.Foreground = new SolidColorBrush(Colors.Red);
+                }
+                else
+                {
+                    if (App.vaisseau.ListTechnique.Count < 4)
+                    {
+                        App.vaisseau.ListTechnique.Add(RechercheTech(txtComp4.Text));
+                        Valide4.Content = "✔";
+                        Valide4.Foreground = new SolidColorBrush(Colors.Green);
+                    }
+                }
+            }
+        }
+
+        private void Valide6_Click(object sender, RoutedEventArgs e)
+        {
+            if (txtComp6.Text != string.Empty)
+            {
+                if (Valide6.Content.ToString() == "✔")
+                {
+                    App.vaisseau.ListTechnique.Remove(RechercheTech(txtComp6.Text));
+                    Valide6.Content = "✘";
+                    Valide6.Foreground = new SolidColorBrush(Colors.Red);
+                }
+                else
+                {
+                    if (App.vaisseau.ListTechnique.Count < 4)
+                    {
+                        App.vaisseau.ListTechnique.Add(RechercheTech(txtComp6.Text));
+                        Valide6.Content = "✔";
+                        Valide6.Foreground = new SolidColorBrush(Colors.Green);
+                    }
+                }
+            }
+        }
+
+        private void Valide5_Click(object sender, RoutedEventArgs e)
+        {
+            if (txtComp6.Text != string.Empty)
+            {
+                if (Valide5.Content.ToString() == "✔")
+                {
+                    App.vaisseau.ListTechnique.Remove(RechercheTech(txtComp5.Text));
+                    Valide5.Content = "✘";
+                    Valide5.Foreground = new SolidColorBrush(Colors.Red);
+                }
+                else
+                {
+                    if (App.vaisseau.ListTechnique.Count < 4)
+                    {
+                        App.vaisseau.ListTechnique.Add(RechercheTech(txtComp5.Text));
+                        Valide5.Content = "✔";
+                        Valide5.Foreground = new SolidColorBrush(Colors.Green);
+                    }
+                }
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (App.vaisseau.ListTechnique.Count == 4)
+            {
+                GridConteneur.Visibility = Visibility.Collapsed;
+              
+            }
         }
     }
 }

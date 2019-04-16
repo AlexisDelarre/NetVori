@@ -31,23 +31,27 @@
             <Grid.Background>
                 <AcrylicBrush TintColor="#CC000000"/>
             </Grid.Background>
-            <Button Content="Valider" HorizontalAlignment="Center" Height="87" Margin="0,542,0,0" VerticalAlignment="Top" Width="273" FontSize="48" RenderTransformOrigin="0.516,1.46" Background="#33FFFFFF" BorderBrush="Black"/>
+            <Button Content="Valider" HorizontalAlignment="Center" Height="87" Margin="0,542,0,0" VerticalAlignment="Top" Width="273" FontSize="48" RenderTransformOrigin="0.516,1.46" Background="#33FFFFFF" BorderBrush="Black" Click="Button_Click"/>
             <Rectangle HorizontalAlignment="Left" Height="224" Margin="48,36,0,0" VerticalAlignment="Top" Width="372" Stroke="White"/>
             <Rectangle HorizontalAlignment="Left" Height="224" Margin="48,287,0,0" VerticalAlignment="Top" Width="372" Stroke="White"/>
             <Rectangle HorizontalAlignment="Left" Height="224" Margin="502,287,0,0" VerticalAlignment="Top" Width="372" Stroke="White"/>
             <Rectangle HorizontalAlignment="Left" Height="224" Margin="502,36,0,0" VerticalAlignment="Top" Width="372" Stroke="White"/>
-            <TextBlock HorizontalAlignment="Left" Margin="523,55,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="182" Width="335" FocusVisualPrimaryBrush="White"/>
-            <TextBlock HorizontalAlignment="Left" Margin="523,307,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="182" Width="335"/>
-            <TextBlock HorizontalAlignment="Left" Margin="67,307,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="182" Width="335"/>
-            <TextBlock HorizontalAlignment="Left" Margin="67,55,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="182" Width="335"/>
+            <TextBlock x:Name="txtComp2" HorizontalAlignment="Left" Margin="523,55,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="182" Width="335" FocusVisualPrimaryBrush="White"/>
+            <TextBlock x:Name="txtComp4" HorizontalAlignment="Left" Margin="523,307,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="182" Width="335"/>
+            <TextBlock x:Name="txtComp3" HorizontalAlignment="Left" Margin="67,307,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="182" Width="335"/>
+            <TextBlock x:Name="txtComp1" HorizontalAlignment="Left" Margin="67,55,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="182" Width="335"/>
             <Rectangle HorizontalAlignment="Left" Height="224" Margin="934,36,0,0" VerticalAlignment="Top" Width="372" Stroke="Red"/>
             <Rectangle HorizontalAlignment="Left" Height="224" Margin="934,287,0,0" VerticalAlignment="Top" Width="372" Stroke="Red"/>
-            <TextBlock HorizontalAlignment="Left" Margin="955,55,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="182" Width="335" FocusVisualPrimaryBrush="White"/>
-            <TextBlock HorizontalAlignment="Left" Margin="955,310,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="182" Width="335" FocusVisualPrimaryBrush="White"/>
+            <TextBlock x:Name="txtComp5" HorizontalAlignment="Left" Margin="955,55,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="182" Width="335" FocusVisualPrimaryBrush="White"/>
+            <TextBlock x:Name="txtComp6" HorizontalAlignment="Left" Margin="955,310,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="182" Width="335" FocusVisualPrimaryBrush="White"/>
+            <Button x:Name="Valide3" Tag="1" HorizontalAlignment="Left" Margin="48,480,0,0" VerticalAlignment="Top" Height="31" Width="44" Content="✔" Click="Valide3_Click"/>
+            <Button x:Name="Valide1" Tag="1" HorizontalAlignment="Left" Margin="48,229,0,0" VerticalAlignment="Top" Height="31" Width="44" Content="✔" Click="Valide1_Click"/>
+            <Button x:Name="Valide2" Tag="1" HorizontalAlignment="Left" Margin="502,229,0,0" VerticalAlignment="Top" Height="31" Width="46" Content="✔" Click="Valide2_Click"/>
+            <Button x:Name="Valide4" Tag="1" HorizontalAlignment="Left" Margin="502,480,0,0" VerticalAlignment="Top" Height="31" Width="46" Content="✔" Click="Valide4_Click"/>
+            <Button x:Name="Valide5" Tag="0" HorizontalAlignment="Left" Margin="934,480,0,0" VerticalAlignment="Top" Height="31" Width="58" Content="✘" Foreground="Red" Click="Valide5_Click"/>
+            <Button x:Name="Valide6" Tag="0" HorizontalAlignment="Left" Margin="934,229,0,0" VerticalAlignment="Top" Height="31" Width="58" Content="✘" Foreground="Red" Click="Valide6_Click"/>
+
         </Grid>
-        <Button Name="BtnQuitter" HorizontalAlignment="Left" Margin="1664,166,0,0" VerticalAlignment="Top" Height="70" Width="82" Click="BtnQuitter_Click">
-            <Image HorizontalAlignment="Left" Source="Assets/croix_rouge.png" Height="70" VerticalAlignment="Center" Width="63" Opacity="0.7" Margin="0,0,0,0"></Image>
-        </Button>
 
 
     </Grid>

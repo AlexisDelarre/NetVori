@@ -32,6 +32,7 @@ namespace NetVori
         public static JVaisseau vaisseau = new JVaisseau();
         public static List<Technique> ListeDeCompetenceBase;
         public static List<Technique> ListLoot;
+        public static List<Technique> ToutesLesCompetence;
         public static Inventaire inventaire = new Inventaire();
 
         /// <summary>
@@ -141,5 +142,31 @@ namespace NetVori
             ListLoot.Add(new Technique("Tir d'Ion III", 7));
             ListLoot.Add(new Technique("Tir de Matière Noir", 17));
         }
+
+        public void InitTtesLesCompt()
+        {
+            ToutesLesCompetence = new List<Technique>();
+            ToutesLesCompetence.Add(new Technique("Tir Laser", 2));
+            ToutesLesCompetence.Add(new Technique("Impulsion Électromagnétique", 0));
+            ToutesLesCompetence.Add(new Technique("Tir de Plasma", 4));
+            ToutesLesCompetence.Add(new Technique("Missile", 1));
+            ToutesLesCompetence.Add(new Technique("Tir de Lumière", 8));
+            ToutesLesCompetence.Add(new Technique("Tir d'Ion", 3));
+            ToutesLesCompetence.Add(new Technique("Tir Gamma", 20));
+            ToutesLesCompetence.Add(new Technique("Tir Laser II", 3));
+            ToutesLesCompetence.Add(new Technique("Impulsion Électromagnétique II", 1));
+            ToutesLesCompetence.Add(new Technique("Tir de Plasma II", 7));
+            ToutesLesCompetence.Add(new Technique("Missile II", 2));
+            ToutesLesCompetence.Add(new Technique("Tir de Lumière II", 10));
+            ToutesLesCompetence.Add(new Technique("Tir d'Ion II", 5));
+            ToutesLesCompetence.Add(new Technique("Tir Laser III", 4));
+            ToutesLesCompetence.Add(new Technique("Impulsion Électromagnétique III", 2));
+            ToutesLesCompetence.Add(new Technique("Tir de Plasma III", 9));
+            ToutesLesCompetence.Add(new Technique("Missile III", 3));
+            ToutesLesCompetence.Add(new Technique("Tir Gravitationnelle", 11));
+            ToutesLesCompetence.Add(new Technique("Tir d'Ion III", 7));
+            ToutesLesCompetence.Add(new Technique("Tir de Matière Noir", 17));
+        }
+        
     }
 }
