@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -24,16 +25,20 @@ namespace NetVori
     public sealed partial class ChoixDesStats : Page
     {
         private int nbrPoint = 20;
+        
+       
         public ChoixDesStats()
         {
             this.InitializeComponent();
             ListComp.SelectionMode = ListViewSelectionMode.Multiple;
-
             txtNbrPoint.Text = nbrPoint.ToString();
-            foreach(Technique t in App.ListeDeCompetenceBase)
+            BtnLetsGo.Visibility = Visibility.Collapsed;
+            foreach (Technique t in App.ListeDeCompetenceBase)
             {
                 ListComp.Items.Add(t.Nom);
             }
+            
+            
         }
 
         private void basHP_Click(object sender, RoutedEventArgs e)
@@ -44,6 +49,14 @@ namespace NetVori
                 nbrPoint += 1;
                 txtHP.Text = App.vaisseau.PoindDeVie.ToString();
                 txtNbrPoint.Text = nbrPoint.ToString();
+            }
+            if (nbrPoint == 0)
+            {
+                BtnLetsGo.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                BtnLetsGo.Visibility = Visibility.Collapsed;
             }
         }
 
@@ -56,6 +69,14 @@ namespace NetVori
                 txtHP.Text = App.vaisseau.PoindDeVie.ToString();
                 txtNbrPoint.Text = nbrPoint.ToString();
             }
+            if (nbrPoint == 0)
+            {
+                BtnLetsGo.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                BtnLetsGo.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void basForce_Click(object sender, RoutedEventArgs e)
@@ -66,6 +87,14 @@ namespace NetVori
                 nbrPoint += 1;
                 txtForce.Text = App.vaisseau.PuissanceDeTir.ToString();
                 txtNbrPoint.Text = nbrPoint.ToString();
+            }
+            if (nbrPoint == 0)
+            {
+                BtnLetsGo.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                BtnLetsGo.Visibility = Visibility.Collapsed;
             }
         }
 
@@ -78,6 +107,14 @@ namespace NetVori
                 txtForce.Text = App.vaisseau.PuissanceDeTir.ToString();
                 txtNbrPoint.Text = nbrPoint.ToString();
             }
+            if (nbrPoint == 0)
+            {
+                BtnLetsGo.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                BtnLetsGo.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void basBouclier_Click(object sender, RoutedEventArgs e)
@@ -88,6 +125,14 @@ namespace NetVori
                 nbrPoint += 5;
                 txtBouclier.Text = App.vaisseau.Bouclier.ToString();
                 txtNbrPoint.Text = nbrPoint.ToString();
+            }
+            if (nbrPoint == 0)
+            {
+                BtnLetsGo.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                BtnLetsGo.Visibility = Visibility.Collapsed;
             }
         }
 
@@ -100,6 +145,14 @@ namespace NetVori
                 txtBouclier.Text = App.vaisseau.Bouclier.ToString();
                 txtNbrPoint.Text = nbrPoint.ToString();
             }
+            if (nbrPoint == 0)
+            {
+                BtnLetsGo.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                BtnLetsGo.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void txtNom_TextChanged(object sender, TextChangedEventArgs e)
@@ -109,7 +162,10 @@ namespace NetVori
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(Game));
+          
+         Frame.Navigate(typeof(Game));
+            
+           
         }
 
         private void ListComp_IsEnabledChanged(object sender, DependencyPropertyChangedEventArgs e)

@@ -123,8 +123,11 @@
     <Content Include="Assets\conteneur.png" />
     <Content Include="Assets\croix_rouge.png" />
     <Content Include="Assets\GameFond.jpg" />
+    <Content Include="Assets\hangar2.jpg" />
     <Content Include="Assets\MainFondEcran2.jpg" />
     <Content Include="Assets\Main_Fond_Ecran.jpg" />
+    <Content Include="Assets\moins.png" />
+    <Content Include="Assets\plus.png" />
     <Content Include="img\etoile.png" />
     <Content Include="img\Vaisseau1.jpg" />
     <Content Include="Properties\Default.rd.xml" />
