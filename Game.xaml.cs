@@ -29,6 +29,8 @@ namespace NetVori
         public Game()
         {
             this.InitializeComponent();
+            GridConteneur.Visibility = Visibility.Collapsed;
+            BtnQuitter.Visibility = Visibility.Collapsed;
             btnVaisseau.Margin = new Thickness(App.coordX, App.coordY, App.coordW, App.coordZ);
             if (App.AfterEvent)
                 ApresEvent(0, false);
@@ -55,6 +57,18 @@ namespace NetVori
             btnAlea1.Opacity = opactity;
             btnAlea1.IsEnabled = etat;
 
+        }
+
+        private void btnConteneur_Click(object sender, RoutedEventArgs e)
+        {
+            GridConteneur.Visibility = Visibility.Visible;
+            BtnQuitter.Visibility = Visibility.Visible;
+        }
+
+        private void BtnQuitter_Click(object sender, RoutedEventArgs e)
+        {
+            GridConteneur.Visibility = Visibility.Collapsed;
+            BtnQuitter.Visibility = Visibility.Collapsed;
         }
     }
 }

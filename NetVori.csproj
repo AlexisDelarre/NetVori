@@ -119,6 +119,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\BattleScreen.jpg" />
+    <Content Include="Assets\conteneur.png" />
+    <Content Include="Assets\croix_rouge.png" />
     <Content Include="Assets\GameFond.jpg" />
     <Content Include="Assets\MainFondEcran2.jpg" />
     <Content Include="Assets\Main_Fond_Ecran.jpg" />
