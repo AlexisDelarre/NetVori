@@ -30,6 +30,7 @@ namespace NetVori
         public static int coordZ = 822;
         public static bool AfterEvent = false;
         public static JVaisseau vaisseau = new JVaisseau();
+        public static List<Technique> ListeDeCompetenceBase;
 
         /// <summary>
         /// Initialise l'objet d'application de singleton.  Il s'agit de la première ligne du code créé
@@ -39,6 +40,7 @@ namespace NetVori
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            InitCompetence();
         }
 
         /// <summary>
@@ -104,6 +106,18 @@ namespace NetVori
             var deferral = e.SuspendingOperation.GetDeferral();
             //TODO: enregistrez l'état de l'application et arrêtez toute activité en arrière-plan
             deferral.Complete();
+        }
+
+
+        public void InitCompetence()
+        {
+            ListeDeCompetenceBase = new List<Technique>();
+            ListeDeCompetenceBase.Add(new Technique("Tir Laser", 2));
+            ListeDeCompetenceBase.Add(new Technique("Impulsion Électromagnétique", 0));
+            ListeDeCompetenceBase.Add(new Technique("Tir de Plasma", 4));
+            ListeDeCompetenceBase.Add(new Technique("Missile", 1));
+            ListeDeCompetenceBase.Add(new Technique("Tir de Lumière", 8));
+            ListeDeCompetenceBase.Add(new Technique("Tir d'Ion",3));
         }
     }
 }

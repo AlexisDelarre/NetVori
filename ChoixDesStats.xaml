@@ -9,18 +9,19 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch">
-        <TextBlock x:Name="txtHP" HorizontalAlignment="Left" Margin="1050,428,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="110"/>
-        <TextBlock x:Name="txtForce" HorizontalAlignment="Left" Margin="1050,540,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="110"/>
-        <TextBlock x:Name="txtBouclier" HorizontalAlignment="Left" Margin="1050,638,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="110"/>
-        <Button x:Name="basHP" Content="bas" HorizontalAlignment="Left" Margin="1206,422,0,0" VerticalAlignment="Top" Click="basHP_Click"/>
-        <Button x:Name="hautHP" Content="haut" HorizontalAlignment="Left" Margin="1346,424,0,0" VerticalAlignment="Top" Click="hautHP_Click"/>
-        <Button x:Name="basForce" Content="bas" HorizontalAlignment="Left" Margin="1206,534,0,0" VerticalAlignment="Top" Click="basForce_Click"/>
-        <Button x:Name="hautForce" Content="haut" HorizontalAlignment="Left" Margin="1348,538,0,0" VerticalAlignment="Top" Click="hautForce_Click"/>
-        <Button x:Name="basBouclier" Content="bas" HorizontalAlignment="Left" Margin="1206,636,0,0" VerticalAlignment="Top" Click="basBouclier_Click"/>
-        <Button x:Name="hautBouclier" Content="haut" HorizontalAlignment="Left" Margin="1348,638,0,0" VerticalAlignment="Top" Click="hautBouclier_Click"/>
+        <TextBlock x:Name="txtHP" HorizontalAlignment="Left" Margin="793,393,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="110"/>
+        <TextBlock x:Name="txtForce" HorizontalAlignment="Left" Margin="793,505,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="110"/>
+        <TextBlock x:Name="txtBouclier" HorizontalAlignment="Left" Margin="793,603,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" Height="36" Width="110"/>
+        <Button x:Name="basHP" Content="bas" HorizontalAlignment="Left" Margin="949,387,0,0" VerticalAlignment="Top" Click="basHP_Click"/>
+        <Button x:Name="hautHP" Content="haut" HorizontalAlignment="Left" Margin="1089,389,0,0" VerticalAlignment="Top" Click="hautHP_Click"/>
+        <Button x:Name="basForce" Content="bas" HorizontalAlignment="Left" Margin="949,499,0,0" VerticalAlignment="Top" Click="basForce_Click"/>
+        <Button x:Name="hautForce" Content="haut" HorizontalAlignment="Left" Margin="1091,503,0,0" VerticalAlignment="Top" Click="hautForce_Click"/>
+        <Button x:Name="basBouclier" Content="bas" HorizontalAlignment="Left" Margin="949,601,0,0" VerticalAlignment="Top" Click="basBouclier_Click"/>
+        <Button x:Name="hautBouclier" Content="haut" HorizontalAlignment="Left" Margin="1091,603,0,0" VerticalAlignment="Top" Click="hautBouclier_Click"/>
         <TextBlock x:Name="txtNbrPoint" HorizontalAlignment="Left" Margin="1239,52,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="78" Width="190" FontSize="36"/>
         <TextBox x:Name="txtNom" HorizontalAlignment="Center" Margin="0,48,0,0" Text="Nom de votre vaisseau" VerticalAlignment="Top" Height="72" Width="386" FontSize="36" TextChanged="txtNom_TextChanged"/>
         <Button Content="Let's Go !" HorizontalAlignment="Left" Margin="663,866,0,0" VerticalAlignment="Top" Height="102" Width="339" Click="Button_Click"/>
+        <ListView x:Name="ListComp" HorizontalAlignment="Left" Height="248" Margin="1239,387,0,0" VerticalAlignment="Top" Width="228" IsEnabledChanged="ListComp_IsEnabledChanged" ItemClick="ListComp_ItemClick" SelectionChanged="ListComp_SelectionChanged" />
 
     </Grid>
 </Page>
