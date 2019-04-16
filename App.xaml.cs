@@ -31,6 +31,8 @@ namespace NetVori
         public static bool AfterEvent = false;
         public static JVaisseau vaisseau = new JVaisseau();
         public static List<Technique> ListeDeCompetenceBase;
+        public static List<Technique> ListLoot;
+        public static Inventaire inventaire = new Inventaire();
 
         /// <summary>
         /// Initialise l'objet d'application de singleton.  Il s'agit de la première ligne du code créé
@@ -41,6 +43,7 @@ namespace NetVori
             this.InitializeComponent();
             this.Suspending += OnSuspending;
             InitCompetence();
+            InitLoot();
         }
 
         /// <summary>
@@ -118,6 +121,25 @@ namespace NetVori
             ListeDeCompetenceBase.Add(new Technique("Missile", 1));
             ListeDeCompetenceBase.Add(new Technique("Tir de Lumière", 8));
             ListeDeCompetenceBase.Add(new Technique("Tir d'Ion",3));
+        }
+
+        public void InitLoot()
+        {
+            ListLoot = new List<Technique>();
+            ListLoot.Add(new Technique("Tir Gamma", 20));
+            ListLoot.Add(new Technique("Tir Laser II", 3));
+            ListLoot.Add(new Technique("Impulsion Électromagnétique II", 1));
+            ListLoot.Add(new Technique("Tir de Plasma II", 7));
+            ListLoot.Add(new Technique("Missile II", 2));
+            ListLoot.Add(new Technique("Tir de Lumière II", 10));
+            ListLoot.Add(new Technique("Tir d'Ion II", 5));
+            ListLoot.Add(new Technique("Tir Laser III", 4));
+            ListLoot.Add(new Technique("Impulsion Électromagnétique III", 2));
+            ListLoot.Add(new Technique("Tir de Plasma III", 9));
+            ListLoot.Add(new Technique("Missile III", 3));
+            ListLoot.Add(new Technique("Tir Gravitationnelle", 11));
+            ListLoot.Add(new Technique("Tir d'Ion III", 7));
+            ListLoot.Add(new Technique("Tir de Matière Noir", 17));
         }
     }
 }

@@ -114,29 +114,19 @@ namespace NetVori
 
         private void ListComp_IsEnabledChanged(object sender, DependencyPropertyChangedEventArgs e)
         {
-            if (ListComp.SelectedItems.Count >= 4)
-            {
-                ListComp.SelectionMode = ListViewSelectionMode.None;
-            }
-
         }
 
         private void ListComp_ItemClick(object sender, ItemClickEventArgs e)
         {
-           
         }
 
         private void ListComp_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
             if (ListComp.SelectedItems.Count >= 4)
             {
                 App.vaisseau.ListTechnique = new List<Technique>();
-
-
                 App.vaisseau.ListTechnique = (from a in App.ListeDeCompetenceBase where (from b in ListComp.SelectedItems select b).Contains(a.Nom) select (a)).ToList();
-
-
+                App.inventaire.Inventary = (from a in App.ListeDeCompetenceBase where (from b in ListComp.SelectedItems select b).Contains(a.Nom) select (a)).ToList();
                 ListComp.SelectionMode = ListViewSelectionMode.None;
             }
         }

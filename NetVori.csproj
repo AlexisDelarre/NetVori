@@ -101,6 +101,7 @@
     <Compile Include="ChoixDesStats.xaml.cs">
       <DependentUpon>ChoixDesStats.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Entite\Inventaire.cs" />
     <Compile Include="Entite\JVaisseau.cs" />
     <Compile Include="Entite\Technique.cs" />
     <Compile Include="Game.xaml.cs">
