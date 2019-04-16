@@ -27,7 +27,13 @@ namespace NetVori
         public ChoixDesStats()
         {
             this.InitializeComponent();
+            ListComp.SelectionMode = ListViewSelectionMode.Multiple;
+
             txtNbrPoint.Text = nbrPoint.ToString();
+            foreach(Technique t in App.ListeDeCompetenceBase)
+            {
+                ListComp.Items.Add(t.Nom);
+            }
         }
 
         private void basHP_Click(object sender, RoutedEventArgs e)
@@ -103,12 +109,26 @@ namespace NetVori
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            App.vaisseau.ListTechnique = new List<Technique>();
-            App.vaisseau.ListTechnique.Add(new Technique("Attaque A", 2));
-            App.vaisseau.ListTechnique.Add(new Technique("Attaque B", 3));
-            App.vaisseau.ListTechnique.Add(new Technique("Attaque C", 0));
-            App.vaisseau.ListTechnique.Add(new Technique("Attaque D", 5));
             Frame.Navigate(typeof(Game));
+        }
+
+        private void ListComp_IsEnabledChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+        }
+
+        private void ListComp_ItemClick(object sender, ItemClickEventArgs e)
+        {
+        }
+
+        private void ListComp_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (ListComp.SelectedItems.Count >= 4)
+            {
+                App.vaisseau.ListTechnique = new List<Technique>();
+                App.vaisseau.ListTechnique = (from a in App.ListeDeCompetenceBase where (from b in ListComp.SelectedItems select b).Contains(a.Nom) select (a)).ToList();
+                App.inventaire.Inventary = (from a in App.ListeDeCompetenceBase where (from b in ListComp.SelectedItems select b).Contains(a.Nom) select (a)).ToList();
+                ListComp.SelectionMode = ListViewSelectionMode.None;
+            }
         }
     }
 }

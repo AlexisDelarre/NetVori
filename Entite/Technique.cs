@@ -10,7 +10,8 @@ namespace NetVori.Entite
     {
         public string Nom { get; set; }
         public int Degat { get; set; }
-
+        public int Precision { get; set; }
+        
         public Technique(string nom, int degat)
         {
             Nom = nom;
