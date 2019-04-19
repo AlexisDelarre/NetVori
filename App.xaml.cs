@@ -34,6 +34,7 @@ namespace NetVori
         public static List<Technique> ListLoot;
         public static List<Technique> ToutesLesCompetence;
         public static Inventaire inventaire = new Inventaire();
+        public static List<int> ListEventDejaFait = new List<int>();
 
         /// <summary>
         /// Initialise l'objet d'application de singleton.  Il s'agit de la première ligne du code créé
