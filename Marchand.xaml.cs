@@ -20,23 +20,37 @@ namespace NetVori
     /// <summary>
     /// Une page vide peut être utilisée seule ou constituer une page de destination au sein d'un frame.
     /// </summary>
-    public sealed partial class MainPage : Page
+    public sealed partial class Marchand : Page
     {
-        public MainPage()
+        public Marchand()
         {
             this.InitializeComponent();
-            
-            
+            GridConteneur.Visibility = Visibility.Collapsed;
+
+        }
+
+
+        private void btnVendre(object sender, RoutedEventArgs e)
+        {
+            GridConteneur.Visibility = Visibility.Visible;
+            btnConteneur.IsEnabled = false;
+            btnConteneur.Opacity = 0;
+            btnConteneur_Copy.IsEnabled = false;
+            btnConteneur_Copy.Opacity = 0;
+        }
+
+        private void btnAcheter(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Frame.Navigate(typeof(ChoixDesStats));
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            Frame.Navigate(typeof(Marchand));
+            GridConteneur.Visibility = Visibility.Collapsed;
+            btnConteneur.IsEnabled = true;
+            btnConteneur.Opacity = 100;
+            btnConteneur_Copy.IsEnabled = true;
+            btnConteneur_Copy.Opacity = 100;
         }
     }
 }
