@@ -43,6 +43,8 @@ namespace NetVori
             vieIA = vaisseauA.PoindDeVie * 10;
             BarreDeVieJoueur.Value = 100;
             BarreDeVieEnemis.Value = 100;
+            Grid_Victoire.Visibility = Visibility.Collapsed;
+            Grid_defaite.Visibility = Visibility.Collapsed;
 
         }
 
@@ -142,13 +144,26 @@ namespace NetVori
 
         public async void Victoire()
         {
-            await new MessageDialog("Vous avez gagné votre combat").ShowAsync(); ;
-            Frame.Navigate(typeof(Game));
+            Grid_Victoire.Visibility = Visibility.Visible;
+            BarreDeVieEnemis.Visibility = Visibility.Collapsed;
+            BarreDeVieEnemis.Visibility = Visibility.Collapsed;
+            BorderMenu.Visibility = Visibility.Collapsed;
+            btnAttaqueA.Visibility = Visibility.Collapsed;
+            btnAttaqueB.Visibility = Visibility.Collapsed;
+            btnAttaqueC.Visibility = Visibility.Collapsed;
+            btnAttaqueD.Visibility = Visibility.Collapsed;
+           
         }
         public async void Defaite()
         {
-            await new MessageDialog("Vous avez perdu votre combat").ShowAsync(); ;
-            Frame.Navigate(typeof(Game));
+            Grid_defaite.Visibility = Visibility.Visible;
+            BarreDeVieEnemis.Visibility = Visibility.Collapsed;
+            BarreDeVieEnemis.Visibility = Visibility.Collapsed;
+            BorderMenu.Visibility = Visibility.Collapsed;
+            btnAttaqueA.Visibility = Visibility.Collapsed;
+            btnAttaqueB.Visibility = Visibility.Collapsed;
+            btnAttaqueC.Visibility = Visibility.Collapsed;
+            btnAttaqueD.Visibility = Visibility.Collapsed;
         }
     }
 
