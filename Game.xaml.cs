@@ -25,8 +25,8 @@ namespace NetVori
     /// </summary>
     public sealed partial class Game : Page
     {
-        public int deplacement;
-
+        private List<Button> listeBouton = new List<Button>();
+        private List<Image> listeImages = new List<Image>();
 
         public Game()
         {
@@ -34,8 +34,7 @@ namespace NetVori
             GridConteneur.Visibility = Visibility.Collapsed;
            
             btnVaisseau.Margin = new Thickness(App.coordX, App.coordY, App.coordW, App.coordZ);
-            if (App.AfterEvent)
-                ApresEvent(0, false);
+
             txtComp1.Text = App.inventaire.Inventary[0].Nom;
             txtComp2.Text = App.inventaire.Inventary[1].Nom;
             txtComp3.Text = App.inventaire.Inventary[2].Nom;
@@ -45,8 +44,31 @@ namespace NetVori
             if (App.inventaire.Inventary.Count > 5)
                 txtComp6.Text = App.inventaire.Inventary[5].Nom;
 
+            listeBouton.Add(btnAlea1);
+            listeBouton.Add(btnAlea2);
+            listeBouton.Add(btnAlea3);
+            listeBouton.Add(btnAlea4);
+            listeBouton.Add(btnAlea5);
+            listeBouton.Add(btnAlea6);
+            listeBouton.Add(btnAlea7);
 
+            listeImages.Add(imgAlea1);
+            listeImages.Add(imgAlea2);
+            listeImages.Add(imgAlea3);
+            listeImages.Add(imgAlea4);
+            listeImages.Add(imgAlea5);
+            listeImages.Add(imgAlea6);
+            listeImages.Add(imgAlea7);
 
+            if (App.ListEventDejaFait.Count != 0)
+            {
+                foreach(int i in App.ListEventDejaFait)
+                {
+                    listeBouton[i-1].Opacity = 0;
+                    listeBouton[i-1].IsEnabled = false;
+                    listeImages[i-1].Opacity = 0;
+                }
+            }
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -56,21 +78,66 @@ namespace NetVori
             App.coordY = 884;
             App.coordW = 46;
             App.coordZ = 10;
-            App.AfterEvent = true;
+            App.ListEventDejaFait.Add(1);
+        }
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(BattleScreen));
+            App.coordX = 1556;
+            App.coordY = 134;
+            App.coordW = 246;
+            App.coordZ = 760;
+            App.ListEventDejaFait.Add(2);
+        }
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(BattleScreen));
+            App.coordX = 1102;
+            App.coordY = 227;
+            App.coordW = 709;
+            App.coordZ = 667;
+            App.ListEventDejaFait.Add(3);
+        }
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(BattleScreen));
+            App.coordX = 370;
+            App.coordY = 655;
+            App.coordW = 709;
+            App.coordZ = 270;
+            App.ListEventDejaFait.Add(4);
+        }
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(BattleScreen));
+            App.coordX = 42;
+            App.coordY = 337;
+            App.coordW = 1769;
+            App.coordZ = 557;
+            App.ListEventDejaFait.Add(5);
+        }
+        private void Button_Click_6(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(BattleScreen));
+            App.coordX = 756;
+            App.coordY = 928;
+            App.coordW = 1055;
+            App.coordZ = -34;
+            App.ListEventDejaFait.Add(6);
+        }
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(BattleScreen));
+            App.coordX = 1460;
+            App.coordY = 836;
+            App.coordW = 351;
+            App.coordZ = 58;
+            App.ListEventDejaFait.Add(7);
         }
 
         private void btnVaisseau_Click(object sender, RoutedEventArgs e)
         {
         }
-
-        public void ApresEvent(int opactity, bool etat)
-        {
-            imgAlea1.Opacity = opactity;
-            btnAlea1.Opacity = opactity;
-            btnAlea1.IsEnabled = etat;
-
-        }
-
         private void btnConteneur_Click(object sender, RoutedEventArgs e)
         {
             GridConteneur.Visibility = Visibility.Visible;
@@ -94,7 +161,6 @@ namespace NetVori
                 }
             }
         }
-
         public Technique RechercheTech(string nom)
         {
             Technique tec = new Technique("NULL",0);
@@ -127,7 +193,6 @@ namespace NetVori
                 }
             }
         }
-
         private void Valide3_Click(object sender, RoutedEventArgs e)
         {
             if (txtComp6.Text != string.Empty)
@@ -149,7 +214,6 @@ namespace NetVori
                 }
             }
         }
-
         private void Valide4_Click(object sender, RoutedEventArgs e)
         {
             if (txtComp6.Text != string.Empty)
@@ -171,7 +235,6 @@ namespace NetVori
                 }
             }
         }
-
         private void Valide6_Click(object sender, RoutedEventArgs e)
         {
             if (txtComp6.Text != string.Empty)
@@ -193,7 +256,6 @@ namespace NetVori
                 }
             }
         }
-
         private void Valide5_Click(object sender, RoutedEventArgs e)
         {
             if (txtComp6.Text != string.Empty)
@@ -215,7 +277,6 @@ namespace NetVori
                 }
             }
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (App.vaisseau.ListTechnique.Count == 4)

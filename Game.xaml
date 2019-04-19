@@ -5,6 +5,7 @@
     xmlns:local="using:NetVori"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Windows10FallCreatorsUpdate="http://schemas.microsoft.com/winfx/2006/xaml/presentation?IsApiContractPresent(Windows.Foundation.UniversalApiContract, 5)"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="980" Width="1920" >
 
@@ -17,8 +18,17 @@
         <Button x:Name="btnAlea1" HorizontalAlignment="Stretch" Margin="1730,884,46,10" VerticalAlignment="Stretch" Width="144" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Visibility="Visible" BorderThickness="0,0,0,0" RequestedTheme="Dark" Click="Button_Click_1" >
             <Image x:Name="imgAlea1" Source="img/etoile.png" Margin="-7,-6,0,-6" HorizontalAlignment="Left" Width="90"/>
         </Button>
+        <Button x:Name="btnAlea2" HorizontalAlignment="Stretch" Margin="1565,134,246,760" VerticalAlignment="Stretch" Width="144" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Visibility="Visible" BorderThickness="0,0,0,0" RequestedTheme="Dark" Click="Button_Click_2" >
+            <Image x:Name="imgAlea2" Source="img/etoile.png" Margin="-7,-6,0,-6" HorizontalAlignment="Left" Width="90"/>
+        </Button>
+        <Button x:Name="btnAlea3" HorizontalAlignment="Stretch" Margin="1102,227,709,667" VerticalAlignment="Stretch" Width="144" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Visibility="Visible" BorderThickness="0,0,0,0" RequestedTheme="Dark" Click="Button_Click_3" >
+            <Image x:Name="imgAlea3" Source="img/etoile.png" Margin="-7,-6,0,-6" HorizontalAlignment="Left" Width="90"/>
+        </Button>
+        <Button x:Name="btnAlea4" HorizontalAlignment="Stretch" Margin="370,655,709,270" VerticalAlignment="Stretch" Width="144" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Visibility="Visible" BorderThickness="0,0,0,0" RequestedTheme="Dark" Click="Button_Click_4" >
+            <Image x:Name="imgAlea4" Source="img/etoile.png" Margin="-7,-6,0,-6" HorizontalAlignment="Left" Width="90"/>
+        </Button>
         <Button x:Name="btnVaisseau" HorizontalAlignment="Stretch" Margin="10,10,1781,822" VerticalAlignment="Stretch" Width="129" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Click="btnVaisseau_Click">
-            <Image x:Name="imgVaisseau" Source="img/Vaisseau1.jpg" Margin="0,11,0,12" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" Width="118" VerticalAlignment="Stretch">
+            <Image x:Name="imgVaisseau" Source="img/Vaisseau1.png" Margin="0,11,0,12" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center" Width="118" VerticalAlignment="Stretch">
                 <Image.RenderTransform>
                     <CompositeTransform Rotation="180"/>
                 </Image.RenderTransform>
@@ -29,7 +39,7 @@
         </Button>
         <Grid Name="GridConteneur"  HorizontalAlignment="Left" Height="651" Margin="351,196,0,0" VerticalAlignment="Top" Width="1358" Opacity="0.7">
             <Grid.Background>
-                <AcrylicBrush TintColor="#CC000000"/>
+                <Windows10FallCreatorsUpdate:AcrylicBrush TintColor="#CC000000"/>
             </Grid.Background>
             <Button Content="Valider" HorizontalAlignment="Center" Height="87" Margin="0,542,0,0" VerticalAlignment="Top" Width="273" FontSize="48" RenderTransformOrigin="0.516,1.46" Background="#33FFFFFF" BorderBrush="Black" Click="Button_Click"/>
             <Rectangle HorizontalAlignment="Left" Height="224" Margin="48,36,0,0" VerticalAlignment="Top" Width="372" Stroke="White"/>
@@ -52,6 +62,15 @@
             <Button x:Name="Valide6" Tag="0" HorizontalAlignment="Left" Margin="934,229,0,0" VerticalAlignment="Top" Height="31" Width="58" Content="✘" Foreground="Red" Click="Valide6_Click"/>
 
         </Grid>
+        <Button x:Name="btnAlea5" HorizontalAlignment="Stretch" Margin="42,337,1769,557" VerticalAlignment="Stretch" Width="144" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Visibility="Visible" BorderThickness="0,0,0,0" RequestedTheme="Dark" Click="Button_Click_5" >
+            <Image x:Name="imgAlea5" Source="img/etoile.png" Margin="0,-57,0,-58" HorizontalAlignment="Center" Width="124"/>
+        </Button>
+        <Button x:Name="btnAlea6" HorizontalAlignment="Stretch" Margin="756,928,1055,-34" VerticalAlignment="Stretch" Width="144" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Visibility="Visible" BorderThickness="0,0,0,0" RequestedTheme="Dark" Click="Button_Click_6" >
+            <Image x:Name="imgAlea6" Source="img/etoile.png" Margin="0,-47,0,-47" HorizontalAlignment="Center" Width="88"/>
+        </Button>
+        <Button x:Name="btnAlea7" HorizontalAlignment="Stretch" Margin="1460,836,351,58" VerticalAlignment="Stretch" Width="144" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Visibility="Visible" BorderThickness="0,0,0,0" RequestedTheme="Dark" Click="Button_Click_7" >
+            <Image x:Name="imgAlea7" Source="img/etoile.png" Margin="-7,-8,0,-6" HorizontalAlignment="Left" Width="80" VerticalAlignment="Stretch"/>
+        </Button>
 
 
     </Grid>
