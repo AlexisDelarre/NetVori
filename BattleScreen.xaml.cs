@@ -45,7 +45,8 @@ namespace NetVori
             BarreDeVieEnemis.Value = 100;
             Grid_Victoire.Visibility = Visibility.Collapsed;
             Grid_defaite.Visibility = Visibility.Collapsed;
-
+            TxtBoxLoot1.Text = App.ListLoot[new Random().Next(0, App.ListLoot.Count)].Nom;
+            TxtBoxLoot2.Text = App.ListLoot[new Random().Next(1, App.ListLoot.Count)].Nom;
         }
 
         public void StatsEnemis()
@@ -152,7 +153,15 @@ namespace NetVori
             btnAttaqueB.Visibility = Visibility.Collapsed;
             btnAttaqueC.Visibility = Visibility.Collapsed;
             btnAttaqueD.Visibility = Visibility.Collapsed;
+            Vaisseau1.Visibility = Visibility.Collapsed;
+            Vaisseau2.Visibility = Visibility.Collapsed;
+            ArgentGagner();
+            txtComp1V.Text = App.vaisseau.ListTechnique[0].Nom;
+            txtComp2V.Text = App.vaisseau.ListTechnique[1].Nom;
+            txtComp3V.Text = App.vaisseau.ListTechnique[2].Nom;
+            txtComp4V.Text = App.vaisseau.ListTechnique[3].Nom;
            
+
         }
         public async void Defaite()
         {
@@ -164,6 +173,28 @@ namespace NetVori
             btnAttaqueB.Visibility = Visibility.Collapsed;
             btnAttaqueC.Visibility = Visibility.Collapsed;
             btnAttaqueD.Visibility = Visibility.Collapsed;
+            ArgentGagner();
+            txtComp1Def.Text = App.vaisseau.ListTechnique[0].Nom;
+            txtComp2Def.Text = App.vaisseau.ListTechnique[1].Nom;
+            txtComp3Def.Text = App.vaisseau.ListTechnique[2].Nom;
+            txtComp4Def.Text = App.vaisseau.ListTechnique[3].Nom;
+        }
+        public void ArgentGagner()
+        {
+            Random aleatoire = new Random();
+            int goldar = aleatoire.Next(100, 200);
+            TxtArgent.Text = goldar.ToString();
+            TxtArgentD.Text = "0";
+        }
+
+        private void BtnValiderV_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Game));
+        }
+
+        private void BtnValiderDefaite_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Game));
         }
     }
 

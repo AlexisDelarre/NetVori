@@ -128,6 +128,8 @@
     <Content Include="Assets\Main_Fond_Ecran.jpg" />
     <Content Include="Assets\moins.png" />
     <Content Include="Assets\plus.png" />
+    <Content Include="Assets\Vaisseau1.png" />
+    <Content Include="Assets\Vaisseau5.png" />
     <Content Include="img\etoile.png" />
     <Content Include="img\Vaisseau1.jpg" />
     <Content Include="img\Vaisseau1.png" />
