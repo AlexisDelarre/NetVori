@@ -132,6 +132,8 @@
     <Content Include="Assets\marchand.jpg" />
     <Content Include="Assets\moins.png" />
     <Content Include="Assets\plus.png" />
+    <Content Include="Assets\Vaisseau1.png" />
+    <Content Include="Assets\Vaisseau5.png" />
     <Content Include="Assets\station.png" />
     <Content Include="img\etoile.png" />
     <Content Include="img\Vaisseau1.jpg" />

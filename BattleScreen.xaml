@@ -12,14 +12,24 @@
         <Grid.Background>
             <ImageBrush ImageSource="/Assets/BattleScreen.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
+<<<<<<< HEAD
         <Border Name="BorderMenu" Height="254" Margin="-15,808,-15,-4" BorderThickness="5,5,5,5">
+=======
+        <Border x:Name="BorderMenu" Height="254" Margin="-15,808,-15,-4" BorderThickness="5,5,5,5">
+>>>>>>> d4630192fc5e5d77754756c264156c11c294fcdf
             <Border.Background>
                 <SolidColorBrush Color="#FF767676" Opacity="0.5"/>
             </Border.Background>
         </Border>
+<<<<<<< HEAD
         <Image Height="219" Margin="94,512,1486,249" Width="340"/>
         <Image Height="209" Margin="1416,79,160,692" Width="344"/>
         <Button Name="btnAttaqueC" Background="White" Content="Attaque C" HorizontalAlignment="Stretch" Margin="1148,844,160,158" VerticalAlignment="Stretch" FontSize="24" FontWeight="Bold" Click="btnAttaqueC_Click">
+=======
+        <Image x:Name="Vaisseau1" Source="Assets/Vaisseau1.png" Margin="148,410,1069,288" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Image x:Name="Vaisseau2" Source="Assets/Vaisseau5.png" Margin="1188,77,99,653" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+        <Button x:Name="btnAttaqueC" Background="White" Content="Attaque C" HorizontalAlignment="Stretch" Margin="1148,844,160,158" VerticalAlignment="Stretch" FontSize="24" FontWeight="Bold" Click="btnAttaqueC_Click">
+>>>>>>> d4630192fc5e5d77754756c264156c11c294fcdf
             <Button.Template>
                 <ControlTemplate>
                     <Border CornerRadius="95" Background="White">
@@ -28,7 +38,11 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
+<<<<<<< HEAD
         <Button Name="btnAttaqueD" Background="White" Content="Attaque D" HorizontalAlignment="Stretch" Margin="1148,963,160,42" VerticalAlignment="Stretch" FontSize="24" FontWeight="Bold" Click="Button_Click">
+=======
+        <Button x:Name="btnAttaqueD" Background="White" Content="Attaque D" HorizontalAlignment="Stretch" Margin="1148,963,160,42" VerticalAlignment="Stretch" FontSize="24" FontWeight="Bold" Click="Button_Click">
+>>>>>>> d4630192fc5e5d77754756c264156c11c294fcdf
             <Button.Template>
                 <ControlTemplate>
                     <Border CornerRadius="95" Background="White">
@@ -37,7 +51,11 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
+<<<<<<< HEAD
         <Button Name="btnAttaqueB" Background="White" Content="Attaque B" HorizontalAlignment="Stretch" Margin="128,963,1180,42" VerticalAlignment="Stretch" FontSize="24" FontWeight="Bold" Click="btnAttaqueB_Click">
+=======
+        <Button x:Name="btnAttaqueB" Background="White" Content="Attaque B" HorizontalAlignment="Stretch" Margin="128,963,1180,42" VerticalAlignment="Stretch" FontSize="24" FontWeight="Bold" Click="btnAttaqueB_Click">
+>>>>>>> d4630192fc5e5d77754756c264156c11c294fcdf
             <Button.Template>
                 <ControlTemplate>
                     <Border CornerRadius="95" Background="White">
@@ -46,7 +64,11 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
+<<<<<<< HEAD
         <Button Name="btnAttaqueA" Content="Attaque A" HorizontalAlignment="Stretch" Margin="128,844,1180,161" VerticalAlignment="Stretch" FontSize="24" FontWeight="Bold" Click="btnAttaqueA_Click">
+=======
+        <Button x:Name="btnAttaqueA" Content="Attaque A" HorizontalAlignment="Stretch" Margin="128,844,1180,161" VerticalAlignment="Stretch" FontSize="24" FontWeight="Bold" Click="btnAttaqueA_Click">
+>>>>>>> d4630192fc5e5d77754756c264156c11c294fcdf
             <Button.Template>
                 <ControlTemplate>
                     <Border CornerRadius="95" Background="White">
@@ -55,18 +77,24 @@
                 </ControlTemplate>
             </Button.Template>
         </Button>
+<<<<<<< HEAD
         <ProgressBar Name="BarreDeVieJoueur" Height="56" Margin="1324,620,68,304" VerticalAlignment="Stretch" Width="528"/>
         <ProgressBar Name="BarreDeVieEnemis" Height="56" Margin="46,10,1346,914" VerticalAlignment="Stretch" Width="528"/>
         <Grid Name="Grid_Victoire" HorizontalAlignment="Center" Height="1097" Margin="0,10,0,0" VerticalAlignment="Top" Width="1950" Opacity="0.9" d:IsHidden="True">
+=======
+        <ProgressBar x:Name="BarreDeVieJoueur" Height="56" Margin="1324,620,68,304" VerticalAlignment="Stretch" Width="528"/>
+        <ProgressBar x:Name="BarreDeVieEnemis" Height="56" Margin="46,10,1346,914" VerticalAlignment="Stretch" Width="528"/>
+        <Grid x:Name="Grid_Victoire" HorizontalAlignment="Center" Height="1097" Margin="0,10,0,0" VerticalAlignment="Top" Width="1950" Opacity="0.9">
+>>>>>>> d4630192fc5e5d77754756c264156c11c294fcdf
             <Grid.Background>
                 <AcrylicBrush TintColor="#CC000000" TintOpacity="1"/>
             </Grid.Background>
-            <TextBlock Name="TxtGagne" HorizontalAlignment="Left" Height="159" Margin="766,77,0,0" Text="VICTOIRE !" TextWrapping="Wrap" VerticalAlignment="Top" Width="484" Foreground="#FF23FF00" FontSize="100"/>
-            <TextBlock Name="TxtPlus" HorizontalAlignment="Left" Height="81" Margin="90,86,0,0" Text="+" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Foreground="#FF23FF00" FontSize="60"/>
-            <TextBlock x:Name="TxtArgent" HorizontalAlignment="Left" Height="92" Margin="124,77,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" Foreground="Gold" FontSize="90"/>
-            <TextBlock Name="TxtGoldar" HorizontalAlignment="Left" Height="81" Margin="303,86,0,0" Text="Goldar" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Foreground="#FF23FF00" FontSize="60"/>
-            <Button Content="Valider" Name="BtnValider" HorizontalAlignment="Left" Margin="1513,905,0,0" VerticalAlignment="Top" Height="102" Width="339" Foreground="White" FontSize="48" Background="{x:Null}" BorderBrush="White"/>
-            <Grid Name="GridConteneur"  HorizontalAlignment="Left" Height="566" Margin="58,305,0,0" VerticalAlignment="Top" Width="1018">
+            <TextBlock x:Name="TxtGagne" HorizontalAlignment="Left" Height="159" Margin="766,77,0,0" Text="VICTOIRE !" TextWrapping="Wrap" VerticalAlignment="Top" Width="484" Foreground="#FF23FF00" FontSize="100"/>
+            <TextBlock x:Name="TxtPlus" HorizontalAlignment="Left" Height="81" Margin="90,86,0,0" Text="+" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Foreground="#FF23FF00" FontSize="60"/>
+            <TextBlock x:Name="TxtArgent" HorizontalAlignment="Left" Height="92" Margin="124,77,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" Foreground="Gold" FontSize="80"/>
+            <TextBlock x:Name="TxtGoldar" HorizontalAlignment="Left" Height="81" Margin="294,89,0,0" Text="Goldar" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Foreground="#FF23FF00" FontSize="60"/>
+            <Button Content="Valider" x:Name="BtnValiderV" HorizontalAlignment="Left" Margin="1513,905,0,0" VerticalAlignment="Top" Height="102" Width="339" Foreground="White" FontSize="48" Background="{x:Null}" BorderBrush="White" Click="BtnValiderV_Click"/>
+            <Grid x:Name="GridConteneur"  HorizontalAlignment="Left" Height="566" Margin="58,305,0,0" VerticalAlignment="Top" Width="1018">
                 <Grid.Background>
                     <AcrylicBrush TintColor="#CC000000"/>
                 </Grid.Background>
@@ -74,14 +102,14 @@
                 <Rectangle HorizontalAlignment="Left" Height="179" Margin="48,332,0,0" VerticalAlignment="Top" Width="242" Stroke="White"/>
                 <Rectangle HorizontalAlignment="Left" Height="179" Margin="381,331,0,0" VerticalAlignment="Top" Width="242" Stroke="White"/>
                 <Rectangle HorizontalAlignment="Left" Height="179" Margin="383,36,0,0" VerticalAlignment="Top" Width="242" Stroke="White"/>
-                <TextBlock x:Name="txtComp2" HorizontalAlignment="Left" Margin="404,51,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="157" Width="203" FocusVisualPrimaryBrush="White"/>
-                <TextBlock x:Name="txtComp4" HorizontalAlignment="Left" Margin="403,339,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="157" Width="203"/>
-                <TextBlock x:Name="txtComp3" HorizontalAlignment="Left" Margin="67,340,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="157" Width="203"/>
-                <TextBlock x:Name="txtComp1" HorizontalAlignment="Left" Margin="67,55,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="139" Width="203"/>
+                <TextBlock x:Name="txtComp2V" HorizontalAlignment="Left" Margin="404,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="157" Width="203" Foreground="White"  FontSize="50"/>
+                <TextBlock x:Name="txtComp4V" HorizontalAlignment="Left" Margin="403,339,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="157" Width="203" Foreground="White"  FontSize="50"/>
+                <TextBlock x:Name="txtComp3V" HorizontalAlignment="Left" Margin="67,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="157" Width="203" Foreground="White"  FontSize="50"/>
+                <TextBlock x:Name="txtComp1V" HorizontalAlignment="Left" Margin="67,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="139" Width="203" Foreground="White"  FontSize="50"/>
                 <Rectangle HorizontalAlignment="Left" Height="179" Margin="723,38,0,0" VerticalAlignment="Top" Width="242" Stroke="White"/>
                 <Rectangle HorizontalAlignment="Left" Height="179" Margin="724,330,0,0" VerticalAlignment="Top" Width="242" Stroke="White"/>
-                <TextBlock x:Name="txtComp5" HorizontalAlignment="Left" Margin="744,50,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="157" Width="203" FocusVisualPrimaryBrush="White"/>
-                <TextBlock x:Name="txtComp6" HorizontalAlignment="Left" Margin="744,342,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="157" Width="203" FocusVisualPrimaryBrush="White"/>
+                <TextBlock x:Name="txtComp5V" HorizontalAlignment="Left" Margin="744,50,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="157" Width="203" Foreground="White"  FontSize="50"/>
+                <TextBlock x:Name="txtComp6V" HorizontalAlignment="Left" Margin="744,342,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="157" Width="203" Foreground="White"  FontSize="50"/>
                 <Button x:Name="Valide3" Tag="1" HorizontalAlignment="Left" Margin="48,480,0,0" VerticalAlignment="Top" Height="31" Width="44" Content="✔" />
                 <Button x:Name="Valide1" Tag="1" HorizontalAlignment="Left" Margin="48,185,0,0" VerticalAlignment="Top" Height="31" Width="44" Content="✔"/>
                 <Button x:Name="Valide2" Tag="1" HorizontalAlignment="Left" Margin="379,185,0,0" VerticalAlignment="Top" Height="31" Width="46" Content="✔"/>
@@ -94,22 +122,27 @@
                 <Grid.Background>
                     <AcrylicBrush TintColor="#CC000000"/>
                 </Grid.Background>
-                <TextBox Name="TxtBoxLoot1" HorizontalAlignment="Left" Margin="109,188,0,0" VerticalAlignment="Top" BorderBrush="White" Height="113" Width="460" Background="{x:Null}" Foreground="White"/>
-                <TextBox Name="TxtBoxLoot2" HorizontalAlignment="Left" Margin="109,378,0,0" VerticalAlignment="Top" BorderBrush="White" Height="113" Width="460" Background="{x:Null}" Foreground="White"/>
+                <TextBlock x:Name="TxtBoxLoot1" HorizontalAlignment="Left" Margin="109,188,0,0" VerticalAlignment="Top" Height="113" Width="460" Foreground="White" FontSize="48"/>
+                <TextBlock x:Name="TxtBoxLoot2" HorizontalAlignment="Left" Margin="109,378,0,0" VerticalAlignment="Top" Height="113" Width="460" Foreground="White" FontSize="48"/>
                 <TextBlock x:Name="TxtNouveau" HorizontalAlignment="Left" Height="159" Margin="137,13,0,0" Text="Nouveau" TextWrapping="Wrap" VerticalAlignment="Top" Width="430" Foreground="#FF23FF00" FontSize="90"/>
-
+                <Rectangle HorizontalAlignment="Center" Height="113" Margin="0,178,0,0" VerticalAlignment="Top" Width="460" Stroke="White"/>
+                <Rectangle HorizontalAlignment="Center" Height="113" Margin="0,359,0,0" VerticalAlignment="Top" Width="460" Stroke="White"/>
             </Grid>
         </Grid>
+<<<<<<< HEAD
         <Grid Name="Grid_defaite" HorizontalAlignment="Left" Height="1097" Margin="0,0,0,0" VerticalAlignment="Top" Width="1950" Opacity="0.9" d:IsHidden="True">
+=======
+        <Grid x:Name="Grid_defaite" HorizontalAlignment="Left" Height="1097" Margin="0,0,0,0" VerticalAlignment="Top" Width="1950" Opacity="0.9">
+>>>>>>> d4630192fc5e5d77754756c264156c11c294fcdf
             <Grid.Background>
                 <AcrylicBrush TintColor="#CC000000" TintOpacity="1"/>
             </Grid.Background>
-            <TextBlock Name="TxtDefaite" HorizontalAlignment="Left" Height="159" Margin="766,77,0,0" Text="DEFAITE.." TextWrapping="Wrap" VerticalAlignment="Top" Width="484" Foreground="Red" FontSize="100"/>
-            <TextBlock Name="TxtPlusD" HorizontalAlignment="Left" Height="81" Margin="90,86,0,0" Text="+" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Foreground="#FF23FF00" FontSize="60"/>
-            <TextBlock x:Name="TxtArgentD" HorizontalAlignment="Left" Height="92" Margin="124,77,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="169" Foreground="Gold" FontSize="90"/>
-            <TextBlock Name="TxtGoldarD" HorizontalAlignment="Left" Height="81" Margin="303,86,0,0" Text="Goldar" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Foreground="#FF23FF00" FontSize="60"/>
-            <Button Content="Valider" Name="BtnValiderDefaite" HorizontalAlignment="Left" Margin="1513,905,0,0" VerticalAlignment="Top" Height="102" Width="339" Foreground="White" FontSize="48" Background="{x:Null}" BorderBrush="White"/>
-            <Grid Name="GridConteneurDefaite"  HorizontalAlignment="Left" Height="566" Margin="58,305,0,0" VerticalAlignment="Top" Width="1018">
+            <TextBlock x:Name="TxtDefaite" HorizontalAlignment="Left" Height="159" Margin="766,77,0,0" Text="DEFAITE.." TextWrapping="Wrap" VerticalAlignment="Top" Width="484" Foreground="Red" FontSize="100"/>
+            <TextBlock x:Name="TxtPlusD" HorizontalAlignment="Left" Height="81" Margin="90,86,0,0" Text="+" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Foreground="#FF23FF00" FontSize="60"/>
+            <TextBlock x:Name="TxtArgentD" HorizontalAlignment="Left" Height="92" Margin="145,77,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" Foreground="Red" FontSize="80"/>
+            <TextBlock x:Name="TxtGoldarD" HorizontalAlignment="Left" Height="81" Margin="294,89,0,0" Text="Goldar" TextWrapping="Wrap" VerticalAlignment="Top" Width="205" Foreground="#FF23FF00" FontSize="60"/>
+            <Button Content="Valider" x:Name="BtnValiderDefaite" HorizontalAlignment="Left" Margin="1513,905,0,0" VerticalAlignment="Top" Height="102" Width="339" Foreground="White" FontSize="48" Background="{x:Null}" BorderBrush="White" Click="BtnValiderDefaite_Click"/>
+            <Grid x:Name="GridConteneurDefaite"  HorizontalAlignment="Left" Height="566" Margin="58,305,0,0" VerticalAlignment="Top" Width="1018">
                 <Grid.Background>
                     <AcrylicBrush TintColor="#CC000000"/>
                 </Grid.Background>
@@ -117,14 +150,14 @@
                 <Rectangle HorizontalAlignment="Left" Height="179" Margin="48,332,0,0" VerticalAlignment="Top" Width="242" Stroke="White"/>
                 <Rectangle HorizontalAlignment="Left" Height="179" Margin="381,331,0,0" VerticalAlignment="Top" Width="242" Stroke="White"/>
                 <Rectangle HorizontalAlignment="Left" Height="179" Margin="383,36,0,0" VerticalAlignment="Top" Width="242" Stroke="White"/>
-                <TextBlock x:Name="txtComp2Def" HorizontalAlignment="Left" Margin="404,51,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="157" Width="203" FocusVisualPrimaryBrush="White"/>
-                <TextBlock x:Name="txtComp4Def" HorizontalAlignment="Left" Margin="403,339,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="157" Width="203"/>
-                <TextBlock x:Name="txtComp3Def" HorizontalAlignment="Left" Margin="67,340,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="157" Width="203"/>
-                <TextBlock x:Name="txtComp1Def" HorizontalAlignment="Left" Margin="67,55,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="139" Width="203"/>
+                <TextBlock x:Name="txtComp2Def" HorizontalAlignment="Left" Margin="404,51,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="157" Width="203"  Foreground="White"  FontSize="50"/>
+                <TextBlock x:Name="txtComp4Def" HorizontalAlignment="Left" Margin="403,339,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="157" Width="203" Foreground="White" FontSize="50"/>
+                <TextBlock x:Name="txtComp3Def" HorizontalAlignment="Left" Margin="67,340,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="157" Width="203" Foreground="White"  FontSize="50"/>
+                <TextBlock x:Name="txtComp1Def" HorizontalAlignment="Left" Margin="67,55,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="139" Width="203" Foreground="White"  FontSize="50"/>
                 <Rectangle HorizontalAlignment="Left" Height="179" Margin="723,38,0,0" VerticalAlignment="Top" Width="242" Stroke="White"/>
                 <Rectangle HorizontalAlignment="Left" Height="179" Margin="724,330,0,0" VerticalAlignment="Top" Width="242" Stroke="White"/>
-                <TextBlock x:Name="txtComp5Def" HorizontalAlignment="Left" Margin="744,50,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="157" Width="203" FocusVisualPrimaryBrush="White"/>
-                <TextBlock x:Name="txtComp6Def" HorizontalAlignment="Left" Margin="744,342,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="157" Width="203" FocusVisualPrimaryBrush="White"/>
+                <TextBlock x:Name="txtComp5Def" HorizontalAlignment="Left" Margin="744,50,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="157" Width="203" Foreground="White"  FontSize="50"/>
+                <TextBlock x:Name="txtComp6Def" HorizontalAlignment="Left" Margin="744,342,0,0" Text="" TextWrapping="Wrap" VerticalAlignment="Top" Height="157" Width="203" Foreground="White"  FontSize="50" />
                 <Button x:Name="Valide3Def" Tag="1" HorizontalAlignment="Left" Margin="48,480,0,0" VerticalAlignment="Top" Height="31" Width="44" Content="✔" />
                 <Button x:Name="Valide1Def" Tag="1" HorizontalAlignment="Left" Margin="48,185,0,0" VerticalAlignment="Top" Height="31" Width="44" Content="✔"/>
                 <Button x:Name="Valide2Def" Tag="1" HorizontalAlignment="Left" Margin="379,185,0,0" VerticalAlignment="Top" Height="31" Width="46" Content="✔" />
@@ -137,9 +170,7 @@
                 <Grid.Background>
                     <AcrylicBrush TintColor="#CC000000"/>
                 </Grid.Background>
-                <TextBox Name="TxtBoxLoot1Def" HorizontalAlignment="Left" Margin="109,188,0,0" VerticalAlignment="Top" BorderBrush="White" Height="113" Width="460" Background="{x:Null}" Foreground="White"/>
-                <TextBox Name="TxtBoxLoot2Def" HorizontalAlignment="Left" Margin="109,378,0,0" VerticalAlignment="Top" BorderBrush="White" Height="113" Width="460" Background="{x:Null}" Foreground="White"/>
-                <TextBlock x:Name="TxtNouveauDef" HorizontalAlignment="Left" Height="159" Margin="137,13,0,0" Text="Nouveau" TextWrapping="Wrap" VerticalAlignment="Top" Width="430" Foreground="#FF23FF00" FontSize="90"/>
+                <TextBlock x:Name="TxtNouveauDef" HorizontalAlignment="Left" Height="216" Margin="38,166,0,0" Text="Aucun equipement gagné.." TextWrapping="Wrap" VerticalAlignment="Top" Width="589" Foreground="Red" FontSize="60"/>
 
 
             </Grid>
