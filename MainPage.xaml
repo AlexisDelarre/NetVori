@@ -14,7 +14,7 @@
         </Grid.Background>
         <TextBlock Text=" MAIN MENU" FontSize="72" FontFamily="Verdana" Margin="0,546,116,0" HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold" Foreground="Red" SelectionHighlightColor="Red" Width="506"/>
         <Button Name="btnNouveau" Content="Nouveau" HorizontalAlignment="Right" Margin="0,667,172,0" VerticalAlignment="Top" Height="123" Width="352" FontSize="72" Click="Button_Click" Background="{x:Null}" Foreground="White" FontWeight="Normal" BorderBrush="Red"/>
-        <Button Content="Quitter" HorizontalAlignment="Right" Margin="0,819,172,0" VerticalAlignment="Top" Height="123" Width="352" Background="{x:Null}" FontSize="72" Foreground="White" FontWeight="Normal" BorderBrush="Red"/>
+        <Button Content="Quitter" HorizontalAlignment="Right" Margin="0,819,172,0" VerticalAlignment="Top" Height="123" Width="352" Background="{x:Null}" FontSize="72" Foreground="White" FontWeight="Normal" BorderBrush="Red" Click="Button_Click_1"/>
 
     </Grid>
 </Page>

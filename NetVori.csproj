@@ -107,6 +107,9 @@
     <Compile Include="Game.xaml.cs">
       <DependentUpon>Game.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Marchand.xaml.cs">
+      <DependentUpon>Marchand.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -126,10 +129,12 @@
     <Content Include="Assets\hangar2.jpg" />
     <Content Include="Assets\MainFondEcran2.jpg" />
     <Content Include="Assets\Main_Fond_Ecran.jpg" />
+    <Content Include="Assets\marchand.jpg" />
     <Content Include="Assets\moins.png" />
     <Content Include="Assets\plus.png" />
     <Content Include="Assets\Vaisseau1.png" />
     <Content Include="Assets\Vaisseau5.png" />
+    <Content Include="Assets\station.png" />
     <Content Include="img\etoile.png" />
     <Content Include="img\Vaisseau1.jpg" />
     <Content Include="img\Vaisseau1.png" />
@@ -158,6 +163,10 @@
     <Page Include="Game.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Marchand.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
