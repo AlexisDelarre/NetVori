@@ -52,6 +52,8 @@ namespace NetVori
             listeBouton.Add(btnAlea6);
             listeBouton.Add(btnAlea7);
 
+            string a = App.ListLoot[new Random().Next(0, App.ListLoot.Count)].Nom;
+
             listeImages.Add(imgAlea1);
             listeImages.Add(imgAlea2);
             listeImages.Add(imgAlea3);
@@ -284,6 +286,11 @@ namespace NetVori
                 GridConteneur.Visibility = Visibility.Collapsed;
               
             }
+        }
+
+        private void btnMarchand(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Marchand));
         }
     }
 }

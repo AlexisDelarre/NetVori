@@ -71,6 +71,9 @@
         <Button x:Name="btnAlea7" HorizontalAlignment="Stretch" Margin="1460,836,351,58" VerticalAlignment="Stretch" Width="144" FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" Foreground="{x:Null}" BorderBrush="{x:Null}" Background="{x:Null}" Visibility="Visible" BorderThickness="0,0,0,0" RequestedTheme="Dark" Click="Button_Click_7" >
             <Image x:Name="imgAlea7" Source="img/etoile.png" Margin="-7,-8,0,-6" HorizontalAlignment="Left" Width="80" VerticalAlignment="Stretch"/>
         </Button>
+        <Button x:Name="btnConteneur_Copy" Content="Marchand" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  FocusVisualPrimaryBrush="{x:Null}" FocusVisualSecondaryBrush="{x:Null}" Foreground="White" BorderBrush="{x:Null}" Background="{x:Null}" Visibility="Visible" BorderThickness="0,0,0,0" RequestedTheme="Dark" Margin="273,797,1451,0" Click="btnMarchand">
+            
+        </Button>
 
 
     </Grid>
